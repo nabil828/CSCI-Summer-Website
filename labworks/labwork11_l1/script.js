@@ -27,6 +27,9 @@ make_visible = function() {
     jQuery('#face_img').show()
 }
 
+insert_after = function() {
+    jQuery('#expand').after('<i>New content</i>')
+}
 
 setup = function() {
   jQuery('#face_img').click(be_sad);
@@ -37,6 +40,9 @@ setup = function() {
 
   jQuery('#show').click(make_visible);
   jQuery('#hide').click(make_invisible);
+
+
+  jQuery('#after').click(insert_after);
 }
 
 jQuery(document).ready(setup)
