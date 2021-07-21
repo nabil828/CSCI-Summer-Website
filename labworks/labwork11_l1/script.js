@@ -19,12 +19,24 @@ br50 = function(){
   jQuery('#face_img').attr('class', 'border_radius_50')
 }
 
+
+make_invisible = function() {
+    jQuery('#face_img').hide()
+}
+make_visible = function() {
+    jQuery('#face_img').show()
+}
+
+
 setup = function() {
   jQuery('#face_img').click(be_sad);
   jQuery('#inc_width').click(increment);
 
   jQuery('#br_8').click(br8);
   jQuery('#br_50').click(br50);
+
+  jQuery('#show').click(make_visible);
+  jQuery('#hide').click(make_invisible);
 }
 
 jQuery(document).ready(setup)
